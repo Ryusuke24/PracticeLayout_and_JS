@@ -3,7 +3,11 @@ module.exports = {
   content: ["./index.html"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        image: 'url("public/img/background.jpeg");',
+      },
+    },
   },
   plugins: [],
 };

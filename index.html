@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New layout</title>
     <link rel="stylesheet" href="public/output.css" />
   </head>
-  <body>
+  <body style="background-image: url(public/img/background.jpeg)">
+    <div class="mx-auto h-screen grid grid-rows-[auto_1fr_auto]">
+      <header class="m-10">
+        <div class="flex justify-between">
+          <a class="" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-16 h-16"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </a>
+          <div>
+            <div>
+              <img
+                class="w-16 h-16 rounded-full border-gray-500 border-2"
+                src="public/img/user1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="mt-10">
+        <div
+          class="flex flex-col items-center justify-between h-[calc(100vh-200px)]"
+        >
+          <div class="px-10 mb-10">
+            <h1 class="font-semibold text-8xl">Where do you want to be?</h1>
+          </div>
+          <div class="flex gap-6 items-center">
+            <div>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-16 h-16"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="w-52 h-52 bg-black text-white rounded-3xl flex flex-col justify-around pl-6"
+            >
+              <h2 class="text-3xl">
+                Quiet <br />
+                place
+              </h2>
+              <div class="romanticTrip inline-flex items-center justify-center">
+                <img
+                  class="relative w-10 z-10 border-4 border-black rounded-full"
+                  src="public/img/brazil-.png"
+                  alt=""
+                />
+                <img
+                  class="relative w-10 z-20 right-3 border-4 border-black rounded-full"
+                  src="public/img/italy.png"
+                  alt=""
+                />
+                <img
+                  class="relative w-10 z-30 right-6 border-4 border-black rounded-full"
+                  src="public/img/france.png"
+                  alt=""
+                />
+                <p
+                  class="relative w-10 h-10 flex items-center z-40 right-9 border-4 border-black rounded-full bg-black"
+                >
+                  100+
+                </p>
+              </div>
+            </div>
+            <div>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-16 h-16"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden w-52 h-52 bg-black text-white rounded-3xl flex flex-col justify-around pl-6"
+            >
+              <h2 class="text-3xl">
+                Romantic <br />
+                trip
+              </h2>
+              <div class="romanticTrip inline-flex items-center justify-center">
+                <img
+                  class="relative w-10 z-10 border-4 border-black rounded-full"
+                  src="public/img/brazil-.png"
+                  alt=""
+                />
+                <img
+                  class="relative w-10 z-20 right-3 border-4 border-black rounded-full"
+                  src="public/img/italy.png"
+                  alt=""
+                />
+                <img
+                  class="relative w-10 z-30 right-6 border-4 border-black rounded-full"
+                  src="public/img/france.png"
+                  alt=""
+                />
+                <p
+                  class="relative w-10 h-10 flex items-center z-40 right-9 border-4 border-black rounded-full bg-black"
+                >
+                  100+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="script/script.js"></script>
   </body>
 </html>
