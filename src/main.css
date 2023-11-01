@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.filterBtn {
+  @apply border-2 border-white text-gray-600 py-3 px-10 text-lg bg-white mr-3 rounded-xl;
+}
