@@ -1,0 +1,30 @@
+{
+  "name": "practicelayout_and_js",
+  "version": "1.0.0",
+  "description": "in this repo, i would try to create a web-site",
+  "main": "index.html",
+  "scripts": {
+    "startwatch": "tailwindcss -i src/main.css -o public/output.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryusuke24/PracticeLayout_and_JS.git"
+  },
+  "keywords": [
+    "site",
+    "web",
+    "frontend",
+    "dev"
+  ],
+  "author": "Ryusuke yunglean_24@mail.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryusuke24/PracticeLayout_and_JS/issues"
+  },
+  "homepage": "https://github.com/Ryusuke24/PracticeLayout_and_JS#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}
