@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .filterBtn {
-  @apply border-2 border-white text-gray-600 py-3 px-10 text-lg bg-white mr-3 rounded-xl;
+  @apply border-2 border-gray-400 text-gray-600 py-3 px-10 text-lg  md:gap-10 bg-white mr-3 rounded-xl w-60 hover:bg-gray-300 hover:border-gray-300 transition-all duration-500;
 }
