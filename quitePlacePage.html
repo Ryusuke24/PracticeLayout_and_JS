@@ -6,8 +6,8 @@
     <title>New layout</title>
     <link rel="stylesheet" href="public/output.css" />
   </head>
-  <body class="bg-indigo-400 md:bg-gradient-to-br from-slate-500 to-indigo-500">
-    <div class="mx-auto h-screen grid grid-rows-[auto_1fr_auto]">
+  <body class="bg-indigo-400 lg:bg-gradient-to-br from-slate-500 to-indigo-500">
+    <div class="mx-auto h-screen grid grid-rows-[auto_1fr]">
       <header class="m-10">
         <div class="flex justify-between">
           <a class="" href="index.html">
@@ -163,9 +163,11 @@
               Attractions
             </button>
           </nav>
-          <div class="flex justify-center mt-5">
+          <div
+            class="menu flex flex-wrap justify-center mt-5 gap-3 lg:justify-start lg:ml-20"
+          >
             <a class="" href="#">
-              <div class="flex flex-col bg-gray-500 p-5 rounded-xl">
+              <div class="placeCard">
                 <img
                   class="w-32 border-2 border-white rounded-t-full"
                   src="./public/img/Paris.jpg"
@@ -183,40 +185,10 @@
                 </ul>
               </div>
             </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2>Rio</h2>
-                <ul>
-                  <li>52 hotels</li>
-                  <li>3 tours</li>
-                </ul>
-              </div>
-            </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2>Provans</h2>
-                <ul>
-                  <li>52 hotels</li>
-                  <li>3 tours</li>
-                </ul>
-              </div>
-            </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2>Toskana</h2>
-                <ul>
-                  <li>52 hotels</li>
-                  <li>3 tours</li>
-                </ul>
-              </div>
-            </a>
           </div>
         </div>
       </main>
     </div>
-    <script type="module" src="script/secondPagescript.js"></script>
+    <script type="module" src="script/placesScript.js"></script>
   </body>
 </html>

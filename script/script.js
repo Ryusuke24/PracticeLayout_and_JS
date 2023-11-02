@@ -1,4 +1,4 @@
-import places from "./json.js";
+import { places } from "./json.js";
 
 let tripDiv = document.querySelector(".quietPlaces");
 let foodTrip = document.querySelector(".foodPlaces");
@@ -17,9 +17,9 @@ let romanticImg = romanticTrip.querySelectorAll("img");
 let foodImg = foodTrip.querySelectorAll("img");
 
 for (let i = 0; i < 3; i++) {
-  tripImg[i].src = places[0].countries[i];
-  romanticImg[i].src = places[1].countries[i];
-  foodImg[i].src = places[2].countries[i];
+  tripImg[i].src = places[0].countries[i].img;
+  romanticImg[i].src = places[1].countries[i].img;
+  foodImg[i].src = places[2].countries[i].img;
 }
 
 leftMobileBtn.addEventListener("click", () => {
@@ -29,9 +29,8 @@ leftMobileBtn.addEventListener("click", () => {
   tripDiv.querySelector("p").textContent = places[bannerId].count + "+";
   let imgs = tripDiv.querySelectorAll("img");
   link.href = places[bannerId].link;
-  imgs[0].src = places[bannerId].countries[0];
-  imgs[1].src = places[bannerId].countries[1];
-  imgs[2].src = places[bannerId].countries[2];
+  for (let i = 0; i < places[bannerId].countries.length; i++)
+    imgs[i].src = places[bannerId].countries[i];
 });
 
 rightMobileBtn.addEventListener("click", () => {
@@ -41,7 +40,6 @@ rightMobileBtn.addEventListener("click", () => {
   tripDiv.querySelector("p").textContent = places[bannerId].count + "+";
   let imgs = tripDiv.querySelectorAll("img");
   link.href = places[bannerId].link;
-  imgs[0].src = places[bannerId].countries[0];
-  imgs[1].src = places[bannerId].countries[1];
-  imgs[2].src = places[bannerId].countries[2];
+  for (let i = 0; i < places[bannerId].countries.length; i++)
+    imgs[i].src = places[bannerId].countries[i];
 });
