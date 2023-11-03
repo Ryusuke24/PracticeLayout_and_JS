@@ -9,3 +9,7 @@
 .placeCard {
   @apply flex flex-col bg-gray-200 p-5 rounded-xl lg:mr-5;
 }
+
+.activeFilterBtn {
+  @apply border-2 border-gray-700 text-gray-200 py-3 px-10 text-lg  md:gap-10 bg-black mr-3 rounded-xl w-60;
+}

@@ -45,7 +45,10 @@ for (let i = 0; i < count; i++) {
 //filter buttons
 //button All
 let bnt_All = document.querySelector(".button_all");
+bnt_All.addEventListener("click", () => {});
 
 let bnt_Mount = document.querySelector(".button_mount");
+bnt_Mount.addEventListener("click", () => {});
+
 let bnt_Sea = document.querySelector(".button_sea");
 let bnt_Attr = document.querySelector(".button_attr");
