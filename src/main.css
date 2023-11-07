@@ -7,7 +7,7 @@
 }
 
 .placeCard {
-  @apply flex flex-col bg-gray-200 p-5 rounded-xl lg:mr-5;
+  @apply flex flex-col bg-gray-200 p-5 rounded-xl lg:mr-5 hover:bg-gray-400 hover:border-black transition-all delay-100;
 }
 
 .activeFilterBtn {
