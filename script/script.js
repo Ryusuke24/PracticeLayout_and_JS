@@ -28,12 +28,7 @@ leftMobileBtn.addEventListener("click", () => {
   let card = document.querySelector(".selectedCard");
   bannerId--;
   if (bannerId == -1) bannerId = places.length - 1;
-  card.querySelector("h2").innerHTML = places[bannerId].name;
-  card.querySelector("p").textContent = places[bannerId].getCitiesCount() + "+";
-  let imgs = card.querySelectorAll("img");
-  link.href = places[bannerId].link;
-  for (let i = 0; i < places[bannerId].countries.length; i++)
-    imgs[i].src = places[bannerId].countries[i].img;
+  changeBanner(card, link);
 });
 
 rightMobileBtn.addEventListener("click", () => {
@@ -41,12 +36,7 @@ rightMobileBtn.addEventListener("click", () => {
   let card = document.querySelector(".selectedCard");
   bannerId++;
   if (bannerId == places.length) bannerId = 0;
-  card.querySelector("h2").innerHTML = places[bannerId].name;
-  card.querySelector("p").textContent = places[bannerId].getCitiesCount() + "+";
-  let imgs = card.querySelectorAll("img");
-  link.href = places[bannerId].link;
-  for (let i = 0; i < places[bannerId].countries.length; i++)
-    imgs[i].src = places[bannerId].countries[i].img;
+  changeBanner(card, link);
 });
 
 function createPlaceIcons(elem, count) {
@@ -129,6 +119,15 @@ function createPlaceIcon(elem) {
   </div></a
 >`;
   elem.appendChild(div);
+}
+
+function changeBanner(card, link) {
+  card.querySelector("h2").innerHTML = places[bannerId].name;
+  card.querySelector("p").textContent = places[bannerId].getCitiesCount() + "+";
+  let imgs = card.querySelectorAll("img");
+  link.href = places[bannerId].link;
+  for (let i = 0; i < places[bannerId].countries.length; i++)
+    imgs[i].src = places[bannerId].countries[i].img;
 }
 
 // let tripDiv = document.querySelector(".quietPlaces");

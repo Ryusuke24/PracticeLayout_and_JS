@@ -14,14 +14,12 @@ for (let elem of places) {
 
 // create cards of tematic cities
 let count = places[currentCard_Id].countries.length;
-console.log(count);
 menu.innerHTML = "";
 
 for (let i = 0; i < count; i++) {
   let cities = places[currentCard_Id].countries[i].getCitiesInCountry();
-  console.log(cities);
   for (let j = 0; j < cities; j++) {
-    menu.innerHTML += `<a class="card" href="#" data-mount="${places[currentCard_Id].countries[i].cities[j].info.isMount}" data-sea="${places[currentCard_Id].countries[i].cities[j].info.isSea}" data-attr="${places[currentCard_Id].countries[i].cities[j].info.isAttractions}">
+    menu.innerHTML += `<a class="card" href="./cities/${places[currentCard_Id].countries[i].cities[j].name}.html" data-mount="${places[currentCard_Id].countries[i].cities[j].info.isMount}" data-sea="${places[currentCard_Id].countries[i].cities[j].info.isSea}" data-attr="${places[currentCard_Id].countries[i].cities[j].info.isAttractions}">
     <div class="placeCard ">
       <img
         class="h-16 w-32 object-cover border-2 border-white rounded-t-full"
@@ -63,46 +61,38 @@ bnt_All.addEventListener("click", () => {
 
 let bnt_Mount = document.querySelector(".button_mount");
 bnt_Mount.addEventListener("click", () => {
-  let cards = document.querySelectorAll(".card");
-  for (let card of cards) {
-    if (card.dataset.mount != "true") {
-      card.style.display = "none";
-    }
-  }
-
-  let buttons = document.querySelectorAll("button");
-  buttons[0].classList.remove("activeFilterBtn");
-  buttons[0].classList.add("filterBtn");
-  bnt_Mount.classList.remove("filterBtn");
-  bnt_Mount.classList.add("activeFilterBtn");
+  filterBy("mount");
+  addActiveStyle(bnt_Mount);
 });
 
 let bnt_Sea = document.querySelector(".button_sea");
 bnt_Sea.addEventListener("click", () => {
-  let cards = document.querySelectorAll(".card");
-  for (let card of cards) {
-    if (card.dataset.sea != "true") {
-      card.style.display = "none";
-    }
-  }
-  let buttons = document.querySelectorAll("button");
-  buttons[0].classList.remove("activeFilterBtn");
-  buttons[0].classList.add("filterBtn");
-  bnt_Sea.classList.remove("filterBtn");
-  bnt_Sea.classList.add("activeFilterBtn");
+  filterBy("sea");
+  addActiveStyle(bnt_Sea);
 });
 
 let bnt_Attr = document.querySelector(".button_attr");
 bnt_Attr.addEventListener("click", () => {
+  filterBy("attr");
+  addActiveStyle(bnt_Attr);
+});
+
+function clearActiveStyle(elem) {
+  elem.classList.remove("activeFilterBtn");
+  elem.classList.add("filterBtn");
+}
+
+function addActiveStyle(elem) {
+  clearActiveStyle(bnt_All);
+  elem.classList.remove("filterBtn");
+  elem.classList.add("activeFilterBtn");
+}
+
+function filterBy(filterElem) {
   let cards = document.querySelectorAll(".card");
   for (let card of cards) {
-    if (card.dataset.attr != "true") {
+    if (card.dataset[filterElem] != "true") {
       card.style.display = "none";
     }
   }
-  let buttons = document.querySelectorAll("button");
-  buttons[0].classList.remove("activeFilterBtn");
-  buttons[0].classList.add("filterBtn");
-  bnt_Attr.classList.remove("filterBtn");
-  bnt_Attr.classList.add("activeFilterBtn");
-});
+}

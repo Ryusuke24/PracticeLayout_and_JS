@@ -6,23 +6,23 @@
     <title>New layout</title>
     <link rel="stylesheet" href="public/output.css" />
   </head>
-  <body class="bg-violet-500">
-    <div class="mx-auto h-screen grid grid-rows-[auto_1fr_auto]">
+  <body class="bg-indigo-400 md:bg-gradient-to-br from-slate-500 to-indigo-500">
+    <div class="mx-auto h-screen grid grid-rows-[auto_1fr]">
       <header class="m-10">
         <div class="flex justify-between">
-          <a class="" href="#">
+          <a class="" href="index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-16 h-16"
+              class="w-16 h-16 hover:text-gray-200 transition-all duration-500"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
           </a>
@@ -37,48 +37,171 @@
           </div>
         </div>
       </header>
-      <main>
-        <div>
-          <h1></h1>
-          <nav></nav>
-          <div>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2></h2>
-                <ul>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2></h2>
-                <ul>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2></h2>
-                <ul>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </a>
-            <a href="">
-              <div>
-                <img src="" alt="" /><img src="" alt="" />
-                <h2></h2>
-                <ul>
-                  <li></li>
-                  <li></li>
+      <main class="">
+        <div class="flex flex-col w-screen">
+          <h1
+            class="cardName mb-10 font-semibold text-6xl lg:self-start md:text-7xl md:pl-20 self-center"
+          >
+            Food trip
+          </h1>
+          <nav
+            class="flex flex-wrap items-center lg:justify-start md:pl-20 justify-center gap-1"
+          >
+            <button class="activeFilterBtn flex button_all">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 mr-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                />
+              </svg>
+              All
+            </button>
+            <button class="filterBtn flex button_mount">
+              <svg
+                height="200px"
+                width="200px"
+                version="1.1"
+                id="_x32_"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                xml:space="preserve"
+                class="w-6 h-6 mr-2"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <style type="text/css">
+                    .st0 {
+                      fill: #000000;
+                    }
+                  </style>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M431.793,340.539c-22.579-24.188-46.288-56.09-65.735-96.994c-2.253-4.748-4.498-9.567-6.592-14.55 c-13.578-31.659-24.589-68.388-30.937-110.658l-1.53-10.289H184.994l-1.522,10.289c-6.35,42.348-17.36,79.077-30.945,110.736 c-2.166,4.984-4.34,9.81-6.584,14.472c-19.769,41.548-43.879,73.693-66.709,98.038c-21.049,22.343-41.061,38.094-55.769,48.14 c-7.314,4.984-13.341,8.601-17.438,10.932c-2.009,1.201-3.618,2.009-4.662,2.566l-1.122,0.565L0,403.952h31.502h13.586h421.826 h8.036H512C511.757,403.787,473.584,385.305,431.793,340.539z M328.528,263.471l-36.329-44.279l-36.242,44.2l-36.242-44.2 l-36.243,44.2l-12.863-15.672c15.108-33.033,27.57-71.441,35.042-115.563h100.777c7.393,44.122,19.848,82.53,34.955,115.563 L328.528,263.471z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              Mountains
+            </button>
+            <button class="filterBtn flex button_sea">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 mr-2"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M3 10C5.48276 10 7.34483 7 7.34483 7C7.34483 7 9.2069 10 11.6897 10C14.1724 10 16.6552 7 16.6552 7C16.6552 7 19.1379 10 21 10"
+                    stroke="#000000"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M3 17C5.48276 17 7.34483 14 7.34483 14C7.34483 14 9.2069 17 11.6897 17C14.1724 17 16.6552 14 16.6552 14C16.6552 14 19.1379 17 21 17"
+                    stroke="#000000"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              Sea
+            </button>
+            <button class="filterBtn flex button_attr">
+              <svg
+                fill="#000000"
+                height="200px"
+                width="200px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                xml:space="preserve"
+                class="w-6 h-6 mr-2"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="M495.304,372.87h-16.696v-50.087c0-9.22-7.475-16.696-16.696-16.696h-16.696V256c0-9.22-7.475-16.696-16.696-16.696 h-16.696v-50.087c0-9.22-7.475-16.696-16.696-16.696h-16.696v-50.087c0-9.22-7.475-16.696-16.696-16.696h-16.696V55.652 c0-9.22-7.475-16.696-16.696-16.696H183.652c-9.22,0-16.696,7.475-16.696,16.696v50.087h-16.696 c-9.22,0-16.696,7.475-16.696,16.696v50.087H116.87c-9.22,0-16.696,7.475-16.696,16.696v50.087H83.478 c-9.22,0-16.696,7.475-16.696,16.696v50.087H50.087c-9.22,0-16.696,7.475-16.696,16.696v50.087H16.696 C7.475,372.87,0,380.345,0,389.565v66.783c0,9.22,7.475,16.696,16.696,16.696c6.998,0,469.25,0,478.609,0 c9.22,0,16.696-7.475,16.696-16.696v-66.783C512,380.345,504.525,372.87,495.304,372.87z M200.348,72.348H256h55.652v33.391 c-21.89,0-17.172,0-38.956,0V89.044c0-9.22-7.475-16.696-16.696-16.696c-9.22,0-16.696,7.475-16.696,16.696v16.696 c-21.763,0-17.044,0-38.957,0V72.348z M174.108,439.652H33.391v-33.391h144.056L174.108,439.652z M180.786,372.87H66.783v-33.391 h117.343L180.786,372.87z M187.464,306.087h-87.29v-33.391h90.63L187.464,306.087z M194.143,239.304h-60.577v-33.391h63.917 L194.143,239.304z M200.821,172.522h-33.864V139.13c14.45,0,23.479,0,37.203,0L200.821,172.522z M207.666,439.652 c1.479-14.796,28.85-288.504,30.052-300.522h36.563c1.336,13.359,28.73,287.298,30.052,300.522H207.666z M307.84,139.13 c13.672,0,22.826,0,37.203,0v33.391h-33.864L307.84,139.13z M314.518,205.913h63.917v33.391h-60.577L314.518,205.913z M321.197,272.696h90.63v33.391h-87.29L321.197,272.696z M327.875,339.478h117.343v33.391H331.214L327.875,339.478z M478.609,439.652H337.892l-3.339-33.391h144.056V439.652z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              Attractions
+            </button>
+          </nav>
+          <div
+            class="menu flex flex-wrap justify-center mt-5 gap-3 lg:justify-start lg:ml-20"
+          >
+            <a
+              class=""
+              href="#"
+              data-mount="${places[currentCard_Id].countries[i].cities[j].info.isMount}"
+              data-sea="${places[currentCard_Id].countries[i].cities[j].info.isSea}"
+              data-attr="${places[currentCard_Id].countries[i].cities[j].info.isAttractions}"
+            >
+              <div class="placeCard">
+                <img
+                  class="h-16 w-32 object-cover border-2 border-white rounded-t-full"
+                  src="${places[currentCard_Id].countries[i].cities[j].info.img}"
+                  alt=""
+                />
+                <img
+                  class="w-8 h-8 self-center bottom-4 border-2 rounded-full border-white relative"
+                  src="${places[currentCard_Id].countries[i].img}"
+                  alt=""
+                />
+                <h2 class="font-semibold self-center text-3xl">
+                  ${places[currentCard_Id].countries[i].cities[j].name}
+                </h2>
+                <ul class="inline-flex gap-2 text-sm self-center">
+                  <li>
+                    <img
+                      src=""
+                      alt=""
+                    />${places[currentCard_Id].countries[i].cities[j].info.hotels}
+                    hotels
+                  </li>
+                  <li>
+                    <img
+                      src=""
+                      alt=""
+                    />${places[currentCard_Id].countries[i].cities[j].info.tours}
+                    tours
+                  </li>
                 </ul>
               </div>
             </a>
@@ -86,6 +209,6 @@
         </div>
       </main>
     </div>
-    <script type="module" src="script/script.js"></script>
+    <script type="module" src="script/placesScript.js"></script>
   </body>
 </html>
