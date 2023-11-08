@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rio</title>
+    <link rel="stylesheet" href="../public/output.css" />
+  </head>
+  <body class="bg-indigo-400 md:bg-gradient-to-br from-slate-500 to-indigo-500">
+    <div class="cityCard mx-auto h-screen grid grid-rows-[auto_1fr]">
+      <header
+        class="bg-gradient-to-br from-orange-300 to-green-600 rounded-b-3xl"
+      >
+        <div class="flex justify-between py-5 px-10">
+          <a class="backLink" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-16 h-16 hover:text-gray-200 transition-all duration-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </a>
+          <div
+            class="bg-white w-16 opacity-90 rounded-2xl flex items-center justify-center hover:bg-gray-300"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mt-20 pl-10">
+          <h1 class="text-8xl font-semibold cityName">Rio</h1>
+          <div class="mt-5 flex items-center justify-start mb-28">
+            <img
+              class="ml-2 w-8 mr-4 countryFlag"
+              src="/PracticeLayout_and_JS/public/img/brazil-.png"
+              alt=""
+            />
+            <p class="countryName text-lg font-semibold">Brazil</p>
+          </div>
+        </div>
+      </header>
+      <main class="mt-5">
+        <div class="grid grid-cols-2 ml-10">
+          <a href="#">
+            <div
+              class="border-2 border-gray-500 bg-white mx-5 rounded-3xl flex flex-wrap items-center justify-around p-3 hover:bg-black hover:text-white transition-all duration-300"
+            >
+              <img
+                class="w-28"
+                src="/PracticeLayout_and_JS/public/img/PlaneAndCase.png"
+                alt="Fly"
+              />
+              <h2 class="text-3xl font-semibold">Choose dates</h2>
+            </div>
+          </a>
+
+          <div class="gap-2 flex flex-wrap">
+            <div
+              class="border-2 border-gray-400 opacity-95 mx-5 rounded-3xl flex flex-col items-center justify-center p-3"
+            >
+              <p class="self-center date">Mo, 6 sep</p>
+              <div class="flex gap-5">
+                <h2 class="font-semibold text-3xl flex">
+                  <span class="temp">21</span> &deg;
+                </h2>
+                <div class="condition">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-8"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M10.5 21L12 18M14.5 21L16 18M6.5 21L8 18M8.8 15C6.14903 15 4 12.9466 4 10.4137C4 8.31435 5.6 6.375 8 6C8.75283 4.27403 10.5346 3 12.6127 3C15.2747 3 17.4504 4.99072 17.6 7.5C19.0127 8.09561 20 9.55741 20 11.1402C20 13.2719 18.2091 15 16 15L8.8 15Z"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-2 border-gray-400 opacity-95 mx-5 rounded-3xl flex flex-wrap items-center justify-around p-4 gap-2"
+            >
+              <p class="font-semibold">Prise from</p>
+              <h2 class="font-semibold text-3xl price">$725</h2>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="../script/citiesScript.js"></script>
+  </body>
+</html>

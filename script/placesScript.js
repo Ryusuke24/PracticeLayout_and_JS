@@ -19,10 +19,14 @@ menu.innerHTML = "";
 for (let i = 0; i < count; i++) {
   let cities = places[currentCard_Id].countries[i].getCitiesInCountry();
   for (let j = 0; j < cities; j++) {
-    menu.innerHTML += `<a class="card" href="./cities/${places[currentCard_Id].countries[i].cities[j].name}.html" data-mount="${places[currentCard_Id].countries[i].cities[j].info.isMount}" data-sea="${places[currentCard_Id].countries[i].cities[j].info.isSea}" data-attr="${places[currentCard_Id].countries[i].cities[j].info.isAttractions}">
-    <div class="placeCard ">
+    menu.innerHTML += `<a class="card" 
+    href="./cities/${places[currentCard_Id].countries[i].name}_${places[currentCard_Id].countries[i].cities[j].name}.html" 
+    data-mount="${places[currentCard_Id].countries[i].cities[j].info.isMount}" 
+    data-sea="${places[currentCard_Id].countries[i].cities[j].info.isSea}" 
+    data-attr="${places[currentCard_Id].countries[i].cities[j].info.isAttractions}">
+    <div class="placeCard flex justify-center items-center">
       <img
-        class="h-16 w-32 object-cover border-2 border-white rounded-t-full"
+        class="h-16 w-32 object-cover  border-2 border-white rounded-t-full"
         src="${places[currentCard_Id].countries[i].cities[j].info.img}"
         alt=""
       />
