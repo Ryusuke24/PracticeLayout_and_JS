@@ -13,3 +13,39 @@
 .activeFilterBtn {
   @apply border-2 border-gray-700 text-gray-200 py-3 px-10 text-lg  md:gap-10 bg-black mr-3 rounded-xl w-60;
 }
+
+.Brazil {
+  @apply bg-gradient-to-br from-orange-300 to-green-600 rounded-b-3xl;
+}
+
+.England {
+  @apply bg-gradient-to-r from-white via-red-600 to-white rounded-b-3xl;
+}
+
+.Italy {
+  @apply bg-gradient-to-r from-green-700 via-white to-red-500 rounded-b-3xl;
+}
+
+.France {
+  @apply bg-gradient-to-r from-blue-700 via-white to-red-500 rounded-b-3xl;
+}
+
+.Japan {
+  @apply bg-gradient-to-b from-white via-65% via-red-700 to-white rounded-b-3xl;
+}
+
+.USA {
+  @apply bg-gradient-to-br from-blue-700 via-40% via-white to-red-700 rounded-b-3xl;
+}
+
+.Spain {
+  @apply bg-gradient-to-b from-red-700 via-65% via-orange-500 to-red-700 rounded-b-3xl;
+}
+
+.Hungary {
+  @apply bg-gradient-to-b from-red-700 via-65% via-white to-green-500 rounded-b-3xl;
+}
+
+.SouthKorea {
+  @apply bg-gradient-to-b from-white via-65% via-blue-300 to-white rounded-b-3xl;
+}

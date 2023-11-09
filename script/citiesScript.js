@@ -1,5 +1,7 @@
+//import json file, but real prog will fetch this data
 import { places } from "./json.js";
 
+//to know city and country name and change page for they
 let pagePath = window.location.href.split("/");
 let pageName = pagePath[pagePath.length - 1].split(".")[0].split("_");
 
@@ -13,6 +15,8 @@ document.querySelector(".countryName").textContent = countryName;
 document.querySelector(".countryFlag").src =
   "/PracticeLayout_and_JS/" + searchByName(countryName, places).img;
 
+document.querySelector(".countryBanner").classList.add(countryName);
+
 document.querySelector(".price").innerHTML = `${
   searchByName(cityName, places).info.cheapestHotel
 }`;
@@ -21,8 +25,11 @@ document.querySelector(".backLink").addEventListener("click", () => {
   window.history.back();
 });
 
+//API init and create URL with needed city
 const API_KEY = "8ff2db571304445694971738230811";
 const URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityName}`;
+
+//init months and weekdays
 let week = ["Sun", "Mo", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let month = [
   "jan",
@@ -39,6 +46,7 @@ let month = [
   "dec",
 ];
 
+//to know now Date
 let date = new Date();
 let nowDay = week[date.getDay()];
 let numDay = date.getDate();
@@ -49,6 +57,7 @@ let conditionBlock = document.querySelector(".condition");
 let tempBlock = document.querySelector(".temp");
 
 let weather = await getWeather();
+console.log(weather);
 
 tempBlock.textContent = weather.current["feelslike_c"];
 dateBlock.textContent = `${nowDay}, ${numDay} ${monthWord}`;
@@ -69,10 +78,9 @@ async function getWeather() {
   return json;
 }
 
+//recursion searching func
 function searchByName(name, obj) {
   for (let elem of obj) {
-    // console.log(elem);
-    // console.log(elem.name == name);
     if (elem.name == name) {
       return elem;
     } else {
@@ -87,5 +95,3 @@ function searchByName(name, obj) {
     }
   }
 }
-// console.log(nowDay, numDay, monthWord);
-// console.log(weather);

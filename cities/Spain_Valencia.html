@@ -6,11 +6,9 @@
     <title>Rio</title>
     <link rel="stylesheet" href="../public/output.css" />
   </head>
-  <body class="bg-indigo-400 md:bg-gradient-to-br from-slate-500 to-indigo-500">
+  <body class="bg-background bg-no-repeat">
     <div class="cityCard mx-auto h-screen grid grid-rows-[auto_1fr]">
-      <header
-        class="bg-gradient-to-br from-orange-300 to-green-600 rounded-b-3xl"
-      >
+      <header class="z-20 countryBanner">
         <div class="flex justify-between py-5 px-10">
           <a class="backLink" href="#">
             <svg
@@ -69,8 +67,8 @@
           </div>
         </div>
       </header>
-      <main class="mt-5">
-        <div class="grid grid-cols-2 ml-10">
+      <main class="mt-5 animate-customBounceDown">
+        <div class="grid grid-cols-2">
           <a href="#">
             <div
               class="border-2 border-gray-500 bg-white mx-5 rounded-3xl flex flex-wrap items-center justify-around p-3 hover:bg-black hover:text-white transition-all duration-300"

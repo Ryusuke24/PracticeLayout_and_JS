@@ -1,8 +1,9 @@
+//import json file, but real prog will fetch this data
 import { places } from "./json.js";
 
-console.log(places.length);
 let placeMenu = document.querySelector(".placeMenu");
-console.log(screen.width);
+
+//calculate screen width than if needs resize
 let entryScreenWidth = screen.width;
 
 if (entryScreenWidth < 768) {
@@ -19,6 +20,7 @@ window.addEventListener("resize", e => {
   }
 });
 
+//buttons functional
 let rightMobileBtn = document.querySelector(".buttonRight");
 let leftMobileBtn = document.querySelector(".buttonLeft");
 let bannerId = 0;
@@ -39,6 +41,7 @@ rightMobileBtn.addEventListener("click", () => {
   changeBanner(card, link);
 });
 
+//function depends of JSON, create samples
 function createPlaceIcons(elem, count) {
   elem.innerHTML = "";
   for (let i = 0; i < count; i++) {
@@ -121,6 +124,7 @@ function createPlaceIcon(elem) {
   elem.appendChild(div);
 }
 
+// this func change banner for another
 function changeBanner(card, link) {
   card.querySelector("h2").innerHTML = places[bannerId].name;
   card.querySelector("p").textContent = places[bannerId].getCitiesCount() + "+";
@@ -129,21 +133,3 @@ function changeBanner(card, link) {
   for (let i = 0; i < places[bannerId].countries.length; i++)
     imgs[i].src = places[bannerId].countries[i].img;
 }
-
-// let tripDiv = document.querySelector(".quietPlaces");
-// let foodTrip = document.querySelector(".foodPlaces");
-// let romanticTrip = document.querySelector(".romanticPlaces");
-
-// tripDiv.querySelector("h2").innerHTML = places[0].name;
-// romanticTrip.querySelector("h2").innerHTML = places[1].name;
-// foodTrip.querySelector("h2").innerHTML = places[2].name;
-
-// let tripImg = tripDiv.querySelectorAll("img");
-// let romanticImg = romanticTrip.querySelectorAll("img");
-// let foodImg = foodTrip.querySelectorAll("img");
-
-// for (let i = 0; i < 3; i++) {
-//   tripImg[i].src = places[0].countries[i].img;
-//   romanticImg[i].src = places[1].countries[i].img;
-//   foodImg[i].src = places[2].countries[i].img;
-// }

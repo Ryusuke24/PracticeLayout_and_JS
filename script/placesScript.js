@@ -1,3 +1,4 @@
+//import json file, but real prog will fetch this data
 import { places } from "./json.js";
 
 //initialization
